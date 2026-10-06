@@ -1,0 +1,17 @@
+{
+  "generated_utc": "2026-10-06T06:53:02+00:00",
+  "python": "3.13.16",
+  "kicad": "7.0.11",
+  "results": {
+    "REPORT.md": "ca7534f6fea7604335015d6b6048af59841d2557cf2bdbe1024623e96e4466d6",
+    "bom.csv": "f2874b0fefb5c01f8ba7157aa30cf11b83eaae049b4a0b00e605d992bb02f4c9",
+    "component_selection.csv": "46bf61c9c8ba8d4725f8a115f197fb09de0c5fb1bce0c22791ff03b76ec88b35",
+    "drc_report.txt": "c74545a5fd2e22b9de3ffaeb90fce97ffdf4ea1e690ab8eaf80287eec690b804",
+    "pcb_layout.svg": "84b3ad2758d77feb1d9642a7cdb9e325c2fcf594096e6d36d8c3eed00fdccacc",
+    "schematic.pdf": "00975e2e345364a7b3ab815291cf5d40d18ab77d02aa545965eec2a878d5b90e",
+    "schematic_analog.svg": "321fe98d56626d136e2a0d9acb9a604f51b637ec414702a1f3d8ca8e64ad7f07",
+    "sib_fabrication.zip": "9b66391de2dbd53a793056bcd9c9d3804126c2bf46d29e9a1fddb0fe411ac410",
+    "summary.json": "d0f35c035f5ec15a3f0e85514e3e0917b782faca57dcf7f5c3cf98b67c7e3285",
+    "track_length.svg": "c036cb32429fb21f837e030a615b8fc49f1b77251e8a26d3cfc5d1bdb5e0f98c"
+  }
+}

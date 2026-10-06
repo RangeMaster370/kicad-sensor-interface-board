@@ -1,0 +1,26 @@
+refs,qty,value,footprint,mpn,stage,role
+C1 C2,2,1u,C_0603,GRM188R61E105KA12,power,LDO input capacitor; LDO output capacitor
+C10,1,10n,C_0603,GRM188R71H103KA01,analog,ADC charge reservoir
+C3 C4 C5 C6 C9 C11 C12,7,100n,C_0603,GRM188R71H104KA93,mcu,VCC decoupling; AVCC decoupling; AREF capacitor; Op-amp decoupling; TMP102 decoupling; EEPROM decoupling
+C7,1,1.5u,C_0805,GRM21BR71C155KA01,analog,Sallen-Key C1
+C8,1,680n,C_0603,GRM188R71C684KA01,analog,Sallen-Key C2
+D1,1,SS14,D_SMA,SS14,power,Reverse-polarity protection
+D2,1,green,LED_0603,LTST-C191KGKT,power,Power LED
+D3,1,yellow,LED_0603,LTST-C191KSKT,mcu,Status LED
+J1,1,VIN 5 V,PinHeader_1x02_P2.54mm,2.54 mm header,power,Supply input
+J3,1,AVR-ISP,PinHeader_2x03_P2.54mm,2x3 header,mcu,ISP programming
+J4,1,I2C,PinHeader_1x04_P2.54mm,2.54 mm header,interfaces,I2C expansion
+J5,1,UART,PinHeader_1x03_P2.54mm,2.54 mm header,interfaces,UART debug port
+R1,1,20k,R_0603,RC0603FR-0720KL,power,Supply monitor divider top
+R10 R11,2,4.7k,R_0603,RC0603FR-074K7L,interfaces,SDA pull-up; SCL pull-up
+R2 R4,2,10k,R_0603,RC0603FR-0710KL,power,Supply monitor divider bottom; Reset pull-up
+R3 R5,2,1k,R_0603,RC0603FR-071KL,power,Power LED resistor; Status LED resistor
+R6,1,10k 1%,R_0603,RC0603FR-0710KL,analog,NTC divider top
+R7 R8,2,15k,R_0603,RC0603FR-0715KL,analog,Sallen-Key R1; Sallen-Key R2
+R9,1,100,R_0603,RC0603FR-07100RL,analog,Isolation resistor
+RT1,1,10k B3380,R_0603,NCP18XH103F03RB,analog,Board temperature sensor
+U1,1,MCP1700-3302E/TT,SOT-23,MCP1700T-3302E/TT,power,3.3 V LDO
+U2,1,ATmega328P-AU,TQFP-32_7x7mm_P0.8mm,ATMEGA328P-AU,mcu,Microcontroller
+U3,1,MCP6001T-I/OT,SOT-23-5,MCP6001T-I/OT,analog,Buffer op-amp
+U4,1,TMP102AIDRLR,SOT-563,TMP102AIDRLR,interfaces,"Digital temperature sensor, address 0x48"
+U5,1,24LC02B,SOIC-8_3.9x4.9mm_P1.27mm,24LC02BT-I/SN,interfaces,"Calibration EEPROM, address 0x50"

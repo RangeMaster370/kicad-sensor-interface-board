@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+hardware/*.kicad_prl
+hardware/*-backups/
+hardware/sib.net
+hardware/*.dsn
+hardware/*.ses

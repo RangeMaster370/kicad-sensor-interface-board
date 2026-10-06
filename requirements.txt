@@ -1,0 +1,4 @@
+matplotlib
+cairosvg   # optional, only for previewing SVGs as PNG
+# external: KiCad 7.0 (kicad-cli and the pcbnew Python module), Java 17+ and Freerouting 1.9 (FREEROUTING_JAR),
+# xvfb-run on headless Linux (Freerouting opens a window)

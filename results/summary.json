@@ -1,0 +1,93 @@
+{
+  "provenance": "Generated from src/sib/design.py with KiCad 7.0.11 (pcbnew Python API, kicad-cli) and Freerouting; not fabricated or bench-tested.",
+  "stages": [
+    "1 Power input and 3.3 V regulation",
+    "2 Microcontroller, programming and status",
+    "3 NTC front end and anti-alias filter",
+    "4 I2C sensor, EEPROM and connectors"
+  ],
+  "library": {
+    "symbols": 15,
+    "footprints": 14
+  },
+  "schematic": {
+    "sheets": 5,
+    "components_on_board": 36,
+    "nets": 22,
+    "no_connect_pins": 15,
+    "netlist_vs_design_problems": 0,
+    "erc_style_problems": 0
+  },
+  "pcb": {
+    "size_mm": [
+      54.0,
+      42.0
+    ],
+    "layers": 2,
+    "footprints": 36,
+    "nets": 22,
+    "tracks": 296,
+    "vias": 35,
+    "track_length_mm": 698.4,
+    "drc": {
+      "violations": 0,
+      "unconnected": 0,
+      "footprint_errors": 0,
+      "errors": 0,
+      "warnings": 0,
+      "kinds": []
+    },
+    "track_length_by_net_mm": {
+      "+3V3": 141.6,
+      "SCL": 75.8,
+      "SDA": 51.4,
+      "RESET": 44.9,
+      "UART_RX": 37.7,
+      "UART_TX": 34.0,
+      "GND": 33.9,
+      "ADC_NTC": 33.7,
+      "SK_B": 32.2,
+      "STATUS_LED": 30.4,
+      "SK_A": 24.5,
+      "PWR_LED_A": 20.4,
+      "VMON": 19.9,
+      "OPA_OUT": 17.8,
+      "VIN_RAW": 17.2,
+      "VIN": 16.9,
+      "NTC_MID": 15.2,
+      "MOSI": 13.1,
+      "AREF": 11.2,
+      "SCK": 11.1,
+      "STAT_LED_A": 8.6,
+      "MISO": 7.1
+    },
+    "vias_by_net": {
+      "AREF": 2,
+      "RESET": 1,
+      "STATUS_LED": 2,
+      "NTC_MID": 2,
+      "ADC_NTC": 3,
+      "GND": 20,
+      "SCL": 1,
+      "UART_RX": 1,
+      "UART_TX": 1,
+      "VMON": 2
+    }
+  },
+  "bom": {
+    "lines": 25,
+    "parts": 36
+  },
+  "component_selection_rows": 9,
+  "fabrication_files": [
+    "sib-B_Cu.gbl",
+    "sib-B_Mask.gbs",
+    "sib-Edge_Cuts.gm1",
+    "sib-F_Cu.gtl",
+    "sib-F_Mask.gts",
+    "sib-F_Paste.gtp",
+    "sib-F_Silkscreen.gto",
+    "sib-job.gbrjob",
+    "sib.drl"
+  ]
+}
