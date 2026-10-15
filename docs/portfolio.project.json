@@ -1,0 +1,109 @@
+{
+  "id": "pcb",
+  "number": "05",
+  "field": "Electronics design (EDA)",
+  "title": "SIB-1 sensor-interface board in KiCad",
+  "card_detail": "Four-stage schematic, custom library, 2-layer PCB, DRC clean.",
+  "context": "A small sensor-interface board for an ATmega328P: protected 5 V input and 3.3 V LDO, an NTC front end with an anti-alias filter, an I2C temperature sensor and a calibration EEPROM. The circuit is split into four functional stages, each on its own schematic sheet, and every symbol and footprint comes from a library built for the board. Python scripts drive KiCad 7 to generate the design from one description and check it. The board has not been fabricated or bench-tested.",
+  "stamp": "KiCad 7 · pcbnew Python API · Freerouting",
+  "statement": {
+    "tool": "KiCad 7 schematic, PCB and DRC, scripted with Python",
+    "built": "15 symbols, 14 footprints, 5 schematic sheets and a 36-part 2-layer board with BOM and Gerbers",
+    "result": "KiCad's netlist matches the design net by net; DRC reports 0 errors and 0 unconnected pads"
+  },
+  "flow_label": "Library to schematic to PCB to checks",
+  "flow": [
+    [
+      "Library",
+      "15 symbols, 14 footprints",
+      "typed pins, IPC-style pads"
+    ],
+    [
+      "Schematic",
+      "4 stage sheets and a root",
+      "global labels between stages"
+    ],
+    [
+      "PCB",
+      "54 x 42 mm, 2 layers",
+      "autorouted, GND pour"
+    ],
+    [
+      "Check",
+      "Netlist, ERC rules, DRC",
+      "0 differences, 0 errors"
+    ]
+  ],
+  "method_note": "Each stage is its own sheet, so the analog front end can be reused on another board as one block. KiCad 7 has no command-line ERC, so the exported netlist is compared with the design and checked against ERC-style rules. Two tests confirm the checker catches a broken connection and a missing power flag.",
+  "plots": [
+    {
+      "file": "pcb_layout.svg",
+      "label": "Layout",
+      "alt": "Routed 2-layer SIB-1 board with top and bottom copper",
+      "caption": "Generated output: routed board, top and bottom copper"
+    },
+    {
+      "file": "schematic_analog.svg",
+      "label": "Analog stage",
+      "alt": "KiCad schematic sheet of the NTC front end and Sallen-Key filter",
+      "caption": "Generated output: analog front-end sheet"
+    },
+    {
+      "file": "track_length.svg",
+      "label": "Routing",
+      "alt": "Routed track length and via count per net, coloured by stage",
+      "caption": "Generated output: track length and vias per net"
+    }
+  ],
+  "spec": [
+    [
+      "Board",
+      "54 x 42 mm, 2 layers, 0.2 mm clearance, 0.6/0.3 mm vias"
+    ],
+    [
+      "Stages",
+      "Power, MCU, NTC front end, I2C sensor and EEPROM"
+    ],
+    [
+      "Parts",
+      "36 placed parts, 25 BOM lines, 22 nets, 15 no-connect pins"
+    ],
+    [
+      "Library",
+      "15 symbols, 14 footprints from 0603 to TQFP-32"
+    ]
+  ],
+  "results_head": [
+    "Check",
+    "Result"
+  ],
+  "results": [
+    [
+      "Netlist vs design",
+      "0 differences"
+    ],
+    [
+      "ERC-style rules",
+      "0 problems"
+    ],
+    [
+      "KiCad DRC",
+      "0 errors, 0 warnings, 0 unconnected"
+    ],
+    [
+      "Routing",
+      "296 segments, 35 vias, 698 mm"
+    ],
+    [
+      "Outputs",
+      "Gerber and drill files, BOM, schematic PDF"
+    ]
+  ],
+  "decisions": [
+    "Ratiometric NTC divider on AVCC with a 1 % divider resistor, taken from the SPICE Monte Carlo.",
+    "One decoupling capacitor for each MCU supply pin, plus AVCC and AREF.",
+    "VIN/3 on ADC1 so firmware can flag a low input before readings drift.",
+    "EEPROM write protect tied low and fixed I2C addresses (0x48, 0x50) for the bring-up firmware."
+  ],
+  "verification": "13 tests check pin and pad numbers for every part, KiCad's netlist against the design, the ERC-style rules, DRC and that every part sits inside the board outline."
+}
